@@ -1,0 +1,30 @@
+{
+  "name": "cyber-monitor-suite",
+  "version": "1.0.0",
+  "description": "Cyber Monitor - Full Stack Security Monitoring System",
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:python": "cd backend/python && pip install -r requirements.txt",
+    "install:all": "npm run install:backend && npm run install:frontend && npm run install:python",
+    "setup": "node setup.js",
+    "dev": "concurrently -n \"BACKEND,FRONTEND,PYTHON\" -c \"bgBlue.bold,bgGreen.bold,bgYellow.bold\" \"npm run backend\" \"npm run frontend\" \"npm run python\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
+    "python": "cd backend/python && python keylogger.py",
+    "start": "npm run dev",
+    "clean": "node clean.js",
+    "build": "cd frontend && npm run build",
+    "quick-start": "npm run setup && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "chalk": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
