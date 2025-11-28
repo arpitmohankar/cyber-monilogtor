@@ -24,6 +24,8 @@ import {
   Menu as MenuIcon,
   Dashboard as DashboardIcon,
   Description as LogsIcon,
+  Assessment,
+  Radar,
   Settings as SettingsIcon,
   Brightness4,
   Brightness7,
@@ -43,6 +45,8 @@ function Layout({ children, darkMode, setDarkMode }) {
   const menuItems = [
     { text: 'Dashboard', icon: <DashboardIcon />, path: '/' },
     { text: 'Activity Logs', icon: <LogsIcon />, path: '/logs' },
+    { text: 'Packet Analyzer', icon: <Assessment />, path: '/packet-analyzer' },
+    { text: 'Network Scanner', icon: <Radar />, path: '/network-scanner' },
     { text: 'Settings', icon: <SettingsIcon />, path: '/settings' },
   ];
 

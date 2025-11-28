@@ -35,11 +35,13 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cybermoni
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log('✅ MongoDB connected successfully'))
-.catch(err => console.error('❌ MongoDB connection error:', err));
+  .then(() => console.log('✅ MongoDB connected successfully'))
+  .catch(err => console.error('❌ MongoDB connection error:', err));
 
 // Routes
 app.use('/api', require('./routes/api'));
+app.use('/api/packet', require('./routes/packet'));
+app.use('/api/scanner', require('./routes/scanner'));
 
 // Serve uploaded files
 app.use('/uploads', express.static('uploads'));

@@ -6,6 +6,8 @@ import { SnackbarProvider } from 'notistack';
 import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
 import LogViewer from './components/LogViewer';
+import PacketAnalyzer from './components/PacketAnalyzer';
+import NetworkScanner from './components/NetworkScanner';
 import Settings from './components/Settings';
 
 function App() {
@@ -46,6 +48,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/logs" element={<LogViewer />} />
+              <Route path="/packet-analyzer" element={<PacketAnalyzer />} />
+              <Route path="/network-scanner" element={<NetworkScanner />} />
               <Route path="/settings" element={<Settings />} />
             </Routes>
           </Layout>
